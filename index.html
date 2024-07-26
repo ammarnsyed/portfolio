@@ -26,7 +26,7 @@
 						<li><a href="#about">About</a></li>
 						<li><a href="#experience">Experience</a></li>
 						<li><a href="#projects">Projects</a></li>
-						<li><a href="#skills">Skills</a></li>
+						<li><a href="#technical-toolkit">Technical Toolkit</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
@@ -240,7 +240,7 @@
 					<li><a href="mailto:ammarns@outlook.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
 					<li><a href="https://www.youtube.com/@nonymousx" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
 				</ul>
-				<a href="#" class="back-to-top"><span class="icon solid fa-arrow-up"></span></a>
+				<a href="#banner" class="back-to-top"><span class="icon solid fa-arrow-up"></span></a>
 				<p>&copy; 2024 Ammar Syed. All Rights Reserved</p>
 			</footer>
 
@@ -253,6 +253,32 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				$(document).ready(function(){
+				  // Add smooth scrolling to all links
+				  $("a").on('click', function(event) {
+	
+					// Make sure this.hash has a value before overriding default behavior
+					if (this.hash !== "") {
+					  // Prevent default anchor click behavior
+					  event.preventDefault();
+	
+					  // Store hash
+					  var hash = this.hash;
+	
+					  // Using jQuery's animate() method to add smooth page scroll
+					  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+					  $('html, body').animate({
+						scrollTop: $(hash).offset().top
+					  }, 800, function(){
+	
+						// Add hash (#) to URL when done scrolling (default click behavior)
+						window.location.hash = hash;
+					  });
+					} // End if
+				  });
+				});
+			</script>
 
 	</body>
 </html>
